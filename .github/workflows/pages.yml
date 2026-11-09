@@ -16,6 +16,10 @@ concurrency:
 
 jobs:
   build:
+    # configure-pages liest die Pages-Konfiguration (GET /repos/.../pages)
+    permissions:
+      contents: read
+      pages: read
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
